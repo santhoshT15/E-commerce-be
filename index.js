@@ -15,7 +15,7 @@ app.use(cors({
 
 mongoose.connect("mongodb+srv://guvib46:guviB46@cluster0.ebhseuj.mongodb.net/?retryWrites=true&w=majority", {useNewURlParser: true});
 
-const con = mongoose.connection();
+const con = mongoose.connection;
 con.on('error', (error) => {
     console.log("Error connecting to the database: " + error);
 });
