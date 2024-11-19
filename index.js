@@ -13,7 +13,7 @@ app.use(cors({
 
 ;
 
-mongoose.connect(process.env.DB_URL, {useNewURlParser: true});
+mongoose.connect("mongodb+srv://guvib46:guviB46@cluster0.ebhseuj.mongodb.net/?retryWrites=true&w=majority", {useNewURlParser: true});
 
 const con = mongoose.connection();
 con.on('error', (error) => {
