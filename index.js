@@ -11,11 +11,11 @@ app.use(cors({
     credentials: true,
 }));
 
-const dbUrl = process.env.DB_URL;
+;
 
-mongoose.connect(dbUrl, {useNewURlParser: true});
+mongoose.connect(process.env.DB_URL, {useNewURlParser: true});
 
-const con = mongoose.connection;
+const con = mongoose.connection();
 con.on('error', (error) => {
     console.log("Error connecting to the database: " + error);
 });
